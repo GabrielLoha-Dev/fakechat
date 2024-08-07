@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAKE CHAT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="containerchat">
+      <div class="settings">
+        <h2>Configurações da Conversa</h2>
+        <label for="contactName">Nome do Contato:</label>
+        <input
+          type="text"
+          id="contactName"
+          placeholder="Nome do contato"
+          autocomplete="off"
+        />
+
+        <label for="messageType">Tipo de Mensagem:</label>
+        <select id="messageType">
+          <option value="sent">Enviada</option>
+          <option value="received">Recebida</option>
+        </select>
+
+        <label for="messageStatus">Status da mensagem:</label>
+        <select id="messageStatus">
+          <option value="sendvist">Entregue e lida</option>
+          <option value="send">Entregue</option>
+          <option value="notsend">Não entregue</option>
+        </select>
+
+        <label for="messageInput">Mensagem:</label>
+        <textarea
+          id="messageInput"
+          placeholder="Digite sua mensagem..."
+        ></textarea>
+
+        <label for="messageTime">Hora da Mensagem:</label>
+        <input type="time" id="messageTime" value="12:00" />
+
+        <button id="sendMessage" class="btn btn-primary">
+          Enviar Mensagem
+        </button>
+      </div>
+
+      <div class="chat">
+        <header class="chat-header">
+          <button class="back-button"><i class="bi bi-arrow-left"></i></button>
+          <div class="contact-info">
+            <div class="nameandphoto">
+              <i class="bi bi-person-circle"></i>
+              <h3 id="contactNameHeader">Contato</h3>
+            </div>
+            <div class="icons">
+              <button class="icon-button"><i class="bi bi-camera"></i></button>
+              <button class="icon-button">
+                <i class="bi bi-telephone"></i>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div id="chatMessages" class="chat-messages">
+          <!-- Mensagens serão adicionadas aqui via JavaScript -->
+        </div>
+      </div>
+    </div>
+    <footer>Direitos reservados - &copy;Gabriel Loha, 2024.</footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
